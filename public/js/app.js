@@ -25,9 +25,7 @@ button.addEventListener('submit' ,(e) => {
                 message1.textContent = data.err;
             } else {
                 message1.innerText = data.location;
-                message2.innerText   = `${data.weather}
-                ${data.actual_temp}
-                ${data.feelslike}`
+                message2.innerText   = `weather : ${data.weather}, Temperature : ${data.actual_temp}, Feels like : ${data.feelslike}`
             }
         })
     })
