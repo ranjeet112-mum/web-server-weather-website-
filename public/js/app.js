@@ -17,7 +17,7 @@ button.addEventListener('submit' ,(e) => {
     // if(location === '') 
         // console.log('no null allowed!');
 
-    fetch(`http://localhost:3000/weather?location=${location}`).then((response)=>{
+    fetch(`/weather?location=${location}`).then((response)=>{
         message1.textContent = '■■■■■■■■■■■□□□  LOADING';
         message2.textContent = '';
     response.json().then((data)=>{

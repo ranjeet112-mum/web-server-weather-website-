@@ -3,6 +3,7 @@ const hbs = require('hbs');
 const express = require('express');
 const geo = require('./utils/gecode.js')
 const forecast = require('./utils/forecast.js')
+const port = process.env.PORT || 3000;
 // console.log(__dirname);
 // console.log(__filename);
 const app = express();
@@ -123,6 +124,6 @@ app.get('/weather',(req,res) => {
     res.send({weather : 'shitty', temp: '2000'})
 })
 
-app.listen(3000,() => {
+app.listen(port,() => {
     console.log('hello there, express is up!!');
 })
