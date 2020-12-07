@@ -3,7 +3,7 @@ const forecast = (lat,lon,callback) => {
     var url=`http://api.weatherstack.com/current?access_key=0c68c217bc8bbdcef6411ffed366faf9&query=${lat},${lon}&units=f`;
     request({url :url , json : true},(err,res) => {
         if(err){
-            // console.log('network unavailable!');
+            // console.log('network unavailable!');cd 
             callback('network unavailable!',undefined);
         } else if (res.body.error) {
             // console.log('unable to fetch weather!!');
